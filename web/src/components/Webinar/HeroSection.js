@@ -1,4 +1,5 @@
-"use client";
+// "use client";
+import Link from "next/link";
 import React from "react";
 import { FaCircleCheck } from "react-icons/fa6";
 import ReactPlayer from "react-player";
@@ -54,16 +55,18 @@ export default function HeroSection() {
                 <span className="ml-2">Limited seats for each session</span>
               </li>
             </ul>
-            <a
+            <Link
               href="#"
               className="mt-4 inline-block bg-indigo-500 text-white py-2 px-4 rounded-3xl hover:bg-indigo-600"
             >
               Book Your Spot @ ₹9
-            </a>
+            </Link>
           </div>
           <div className="flex-1 ">
             <div className="w-full  flex items-center justify-center">
-              <ReactPlayer url="https://www.youtube.com/watch?v=Zd7sW20f020" />
+              <ReactPlayer
+                url={`https://www.youtube.com/watch?v=Zd7sW20f020`}
+              />
             </div>
           </div>
         </div>
