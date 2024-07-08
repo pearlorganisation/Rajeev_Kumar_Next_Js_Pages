@@ -12,10 +12,10 @@ export default function Navbar() {
 
   const navigation = [
     { title: "Home", path: "/" },
-    { title: "About Us", path: "about_us" },
-    { title: "Webinar", path: "webinar" },
-    { title: "Blog", path: "#" },
-    { title: "Contact Us", path: "contact_us" },
+    { title: "About Us", path: "/about_us" },
+    { title: "Webinar", path: "/webinar" },
+    { title: "Blog", path: "/blog" },
+    { title: "Contact Us", path: "/contact_us" },
   ];
   return (
     <nav>
@@ -99,7 +99,7 @@ export default function Navbar() {
                     key={idx}
                     className="text-gray-700 text-md font-bold hover:text-indigo-600"
                   >
-                    <Link href={"/" + item.path} className="block">
+                    <Link href={item.path} className="block">
                       {item.title}
                     </Link>
                   </li>
