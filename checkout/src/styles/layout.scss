@@ -1,0 +1,30 @@
+@import "variables";
+
+.global-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .layout-footer {
+    width: 100%;
+    place-self: end;
+    margin-top: auto;
+  }
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown:hover {
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    top: 110%;
+    height: 2px;
+    background: black;
+    left: 0;
+  }
+}
