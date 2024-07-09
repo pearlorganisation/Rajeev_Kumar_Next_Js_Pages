@@ -1,4 +1,5 @@
 import AboutWebinar from "@/components/Webinar/AboutWebinar";
+import Faq from "@/components/Webinar/Faq";
 import HeroSection from "@/components/Webinar/HeroSection";
 import OurFeatures from "@/components/Webinar/OurFeatures";
 import WhatYour from "@/components/Webinar/WhatYour";
@@ -11,6 +12,7 @@ const webinar = () => {
       <AboutWebinar />
       <WhatYour />
       <OurFeatures />
+      <Faq/>
     </div>
   );
 };

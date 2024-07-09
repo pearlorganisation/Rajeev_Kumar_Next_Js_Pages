@@ -28,7 +28,7 @@ const AboutWebinar = () => {
       <div className=" mx-auto grid sm:grid-cols-2 md:grid-cols-3  xl:grid-cols-4 gap-10  place-content-center">
         {data.map((el, i) => {
           return (
-            <div class="relative w-full">
+            <div class="relative w-full" key={i}>
               <div class="custom-card p-6 h-52 bg-red-50 rounded-t-lg shadow-md text-center">
                 <div class="absolute inset-x-0 top-8 mx-auto w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-sm">
                   <span class="font-semibold">{el.title}</span>
