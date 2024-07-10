@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := all
 
 build:
-	rm -rf out/*
+	rm -rf .next
 	npm run build
 cp:
 	rm -rf ../../www.thoughtglow/*

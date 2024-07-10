@@ -36,7 +36,7 @@ export default function Footer() {
         <h1 className="text-2xl font-bold">Information</h1>
         <div className="p-2 flex gap-3 flex-col">
           <p>Contact Us</p>
-          <p>FAQ's</p>
+          <p>FAQ&apos;s</p>
           <p>Privacy Policy</p>
           <p>Terms and Conditions</p>
         </div>
