@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const HeroSection = () => {
@@ -16,12 +17,12 @@ const HeroSection = () => {
             already in the tech industry but not yet programming. Join our live
             session to discover how to embark on this exciting journey.
           </p>
-          <a
+          <Link
             href="#"
             className="inline-block bg-[#4F46E5] text-white px-6 py-3 rounded-md hover:bg-[#4F46E5]/70 transition"
           >
             Start Now
-          </a>
+          </Link>
         </div>
         <div className="mt-8 lg:mt-0">
           <div className="flex items-center justify-center">

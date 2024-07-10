@@ -17,7 +17,9 @@ const WhatYour = () => {
   ];
   return (
     <div className="container mx-auto py-5 space-y-10 min-h-[50vh]">
-      <h1 className="font-semibold text-4xl text-center">What You' ll Learn</h1>
+      <h1 className="font-semibold text-4xl text-center">
+        What You&apos; ll Learn
+      </h1>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {data.map((item, idx) => {
           return (

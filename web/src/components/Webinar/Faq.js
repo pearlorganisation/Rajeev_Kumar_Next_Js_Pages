@@ -71,7 +71,7 @@ const FaqsCard = (props) => {
   );
 };
 
-export default () => {
+export default function Faq() {
   const faqsList = [
     {
       q: "What is the webinar and what is the course",
@@ -102,10 +102,7 @@ export default () => {
   return (
     <section className="leading-relaxed  max-w-screen-4xl mt-12 mx-auto px-4 md:px-8 py-6">
       <div className="space-y-3 text-center ">
-        <h1 className="text-3xl text-gray-800 font-bold">FAQ's</h1>
-        {/* <p className="text-gray-600 max-w-lg mx-auto text-lg">
-                    Answered all frequently asked questions, Still confused? feel free to contact us.
-                </p> */}
+        <h1 className="text-3xl text-gray-800 font-bold">FAQs</h1>
       </div>
 
       <div className="conatiner mx-auto grid md:grid-cols-2 ">
@@ -114,10 +111,10 @@ export default () => {
         </div>
         <div className="mt-14 max-w-4xl mx-auto ">
           {faqsList.map((item, idx) => (
-            <FaqsCard idx={idx} faqsList={item} />
+            <FaqsCard key={idx} faqsList={item} />
           ))}
         </div>
       </div>
     </section>
   );
-};
+}

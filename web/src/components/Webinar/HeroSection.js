@@ -18,8 +18,8 @@ export default function HeroSection() {
             </h1>
             <p className="text-gray-700 mb-4">
               Join our live session to explore how to start a programming career
-              and how Thought Glow's expert-led courses can set you on the path
-              to success.
+              and how Thought Glow&apos;s expert-led courses can set you on the
+              path to success.
             </p>
             <ul className="space-y-2">
               <li className="flex items-center text-base">
@@ -65,7 +65,6 @@ export default function HeroSection() {
           <div className="flex-1 ">
             <div className="w-full  flex items-center justify-center">
               <ReactPlayer
-              
                 url={`https://www.youtube.com/watch?v=Zd7sW20f020`}
               />
             </div>
