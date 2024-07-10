@@ -18,28 +18,30 @@ export default function Page({ blogs }) {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 p-10 justify-center items-center ">
         {blogs.map((item) => {
           return (
-            <div>
-              <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
-                  <Image
-                    class="rounded-t-lg"
+            
+              <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 min-h-[35rem]">
+                <Link
+                  href={`/blog/${item.slug}`}
+                 
+                 >
+                  <img
+                    className=" rounded-t-lg w-full  h-[16rem]"
                     src={`${item.frontmatter.cover_image}`}
-                    width={500}
-                    height={500}
+                    
                     alt=""
                   />
-                </a>
+                </Link>
                 <div class="p-5">
                   <span className="font-medium">{item.frontmatter.type}</span>
 
                   <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                       {item.frontmatter.title}
                     </h5>
                   </a>
                   <span className="font-medium">{item.frontmatter.date}</span>
 
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-2">
                     {item.frontmatter.excerpt}
                   </p>
                   <Link
@@ -65,7 +67,7 @@ export default function Page({ blogs }) {
                   </Link>
                 </div>
               </div>
-            </div>
+            
           );
         })}
       </div>
@@ -75,11 +77,11 @@ export default function Page({ blogs }) {
 
 export async function getStaticProps() {
   const files = fs.readdirSync(path.join("blogs"));
-  console.log(files, "files");
+  // console.log(files, "files");
   // Get slug and frontmatter from posts
   const posts = files.map((filename) => {
     // Create slug
-    const slug = filename.replace(".md", "");
+    const slug = filename.replace(".mdx", "");
 
     // Get frontmatter
     const markdownWithMeta = fs.readFileSync(
@@ -94,6 +96,8 @@ export async function getStaticProps() {
       frontmatter,
     };
   });
+
+
   return {
     props: {
       blogs: posts,

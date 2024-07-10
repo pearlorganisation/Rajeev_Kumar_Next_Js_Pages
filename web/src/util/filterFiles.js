@@ -1,9 +1,11 @@
-export default function filterFiles(files, type) {
-    let paths = [] 
-    for (let file of files) {
-        if (file.endsWith('.' + type)) {
-            paths.push({params: {slug: file.substring(0, file.length - type.length - 1)}})
-        }
-    }
-    return paths;
+import path from 'path';
+
+function filterFiles(files, extension) {
+  return files
+    .filter(file => path.extname(file).toLowerCase() === `.${extension}`)
+    .map(file => ({
+      params: { slug: file.replace(`.${extension}`, '') },
+    }));
 }
+
+module.exports = filterFiles;

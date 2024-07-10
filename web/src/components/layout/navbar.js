@@ -92,7 +92,7 @@ export default function Navbar() {
               state ? "block" : "hidden"
             }`}
           >
-            <ul className="justify-end items-center font-medium space-y-6 md:flex md:space-x-12 md:space-y-0">
+            <ul className="justify-end items-center font-medium space-y-4 md:flex md:space-x-10 md:space-y-0">
               {navigation.map((item, idx) => {
                 return (
                   <li
@@ -105,7 +105,7 @@ export default function Navbar() {
                   </li>
                 );
               })}
-              <div className="space-y-3 items-center gap-x-6 md:flex md:space-y-0">
+              <div className=" items-center gap-x-6 md:flex md:space-y-0">
                 <li>
                   <Link
                     href="https://learn.thoughtglow.com/login/index.php"
