@@ -12,10 +12,10 @@ export default function Navbar() {
 
   const navigation = [
     { title: "Home", path: "/" },
-    { title: "About Us", path: "about_us" },
-    { title: "Webinar", path: "webinar" },
-    { title: "Blog", path: "#" },
-    { title: "Contact Us", path: "contact_us" },
+    { title: "About Us", path: "/about_us" },
+    { title: "Webinar", path: "/webinar" },
+    { title: "Blog", path: "/blog" },
+    { title: "Contact Us", path: "/contact_us" },
   ];
   return (
     <nav>
@@ -92,20 +92,20 @@ export default function Navbar() {
               state ? "block" : "hidden"
             }`}
           >
-            <ul className="justify-end items-center font-medium space-y-6 md:flex md:space-x-12 md:space-y-0">
+            <ul className="justify-end items-center font-medium space-y-4 md:flex md:space-x-10 md:space-y-0">
               {navigation.map((item, idx) => {
                 return (
                   <li
                     key={idx}
                     className="text-gray-700 text-md font-bold hover:text-indigo-600"
                   >
-                    <Link href={"/" + item.path} className="block">
+                    <Link href={item.path} className="block">
                       {item.title}
                     </Link>
                   </li>
                 );
               })}
-              <div className="space-y-3 items-center gap-x-6 md:flex md:space-y-0">
+              <div className=" items-center gap-x-6 md:flex md:space-y-0">
                 <li>
                   <Link
                     href="https://learn.thoughtglow.com/login/index.php"

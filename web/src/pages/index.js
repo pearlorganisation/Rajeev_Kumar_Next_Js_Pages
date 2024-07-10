@@ -1,3 +1,4 @@
+import Features from "@/components/HomePage/Features";
 import HeroSection from "@/components/HomePage/HeroSection";
 import KnowAbout from "@/components/HomePage/KnowAbout";
 
@@ -6,6 +7,7 @@ function Home() {
     <div>
       <HeroSection />
       <KnowAbout />
+      <Features/>
     </div>
   );
 }

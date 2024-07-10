@@ -12,7 +12,7 @@ const HeroSection = () => {
           <p className="text-gray-700 mb-8">
             With the surge of startups and unicorns, the demand for programmers
             in India is skyrocketing. Now is the perfect time to learn
-            programming and launch your career, whether you're a student or
+            programming and launch your career, whether you&apos;re a student or
             already in the tech industry but not yet programming. Join our live
             session to discover how to embark on this exciting journey.
           </p>
