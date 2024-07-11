@@ -15,9 +15,9 @@ const KnowAbout = () => {
             />
           </div>
           <div className="flex-1">
-            <h1 classNameName="font-medium text-xl text-indigo-500 flex ">
+            <h1 className="font-medium text-xl text-indigo-500 flex ">
               {" "}
-              <div classNameName="flex justify-start items-center">
+              <div className="flex   text-red-600 justify-start items-center">
                 <FaAngleRight />
                 <FaAngleRight />
                 <FaAngleRight />
