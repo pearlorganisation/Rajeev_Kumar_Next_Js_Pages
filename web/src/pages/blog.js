@@ -4,18 +4,20 @@ import matter from "gray-matter";
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
-import Image from "next/image";
+import Head from "next/head";
 
 export default function Page({ blogs }) {
-  console.log("blogs", blogs);
   return (
-    <div className="p-2 ">
-      <div className="flex justify-center">
+    <div className="p-2 container mx-auto ">
+      <Head>
+        <title>Blog</title>
+      </Head>
+      <div className="flex justify-center ">
         <h1 className="text-4xl py-4  text-center font-semibold border-b-[0.2rem] border-gray-400">
           Blog
         </h1>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 p-10 justify-center items-center ">
+      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 p-10 justify-center items-center ">
         {blogs.map((item, idx) => {
           return (
             <div
@@ -24,7 +26,7 @@ export default function Page({ blogs }) {
             >
               <Link href={`/blog/${item.slug}`}>
                 <img
-                  classNameName=" rounded-t-lg w-full  h-[16rem]"
+                  className=" rounded-t-lg w-full  h-[20rem] "
                   src={`${item.frontmatter.cover_image}`}
                   alt=""
                 />
@@ -33,7 +35,7 @@ export default function Page({ blogs }) {
                 <span classNameName="font-medium">{item.frontmatter.type}</span>
 
                 <a href="#">
-                  <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  <h5 className="mb-2 text-xl line-clamp-2 font-bold tracking-tight text-gray-900 dark:text-white">
                     {item.frontmatter.title}
                   </h5>
                 </a>
