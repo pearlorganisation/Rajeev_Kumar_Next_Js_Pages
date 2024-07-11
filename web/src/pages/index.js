@@ -4,10 +4,10 @@ import KnowAbout from "@/components/HomePage/KnowAbout";
 
 function Home() {
   return (
-    <div>
+    <div className="relative">
       <HeroSection />
       <KnowAbout />
-      <Features/>
+      <Features />
     </div>
   );
 }

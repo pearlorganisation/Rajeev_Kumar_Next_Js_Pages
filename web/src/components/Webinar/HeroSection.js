@@ -64,9 +64,13 @@ export default function HeroSection() {
           </div>
           <div className="flex-1 ">
             <div className="w-full  flex items-center justify-center">
-              <ReactPlayer
-                url={`https://www.youtube.com/watch?v=Zd7sW20f020`}
-              />
+              <video
+                controls
+                loop
+                autoPlay
+                poster="./Thumbnail.webp"
+                src="./Webinar.mp4"
+              ></video>
             </div>
           </div>
         </div>
