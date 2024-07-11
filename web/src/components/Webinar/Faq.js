@@ -107,7 +107,7 @@ export default function Faq() {
 
       <div className="conatiner mx-auto grid md:grid-cols-2 ">
         <div className="  grid place-items-center">
-          <img src="faq.svg" className="" />
+          <img src="faq.svg" alt="img" className="" />
         </div>
         <div className="mt-14 max-w-4xl mx-auto ">
           {faqsList.map((item, idx) => (
