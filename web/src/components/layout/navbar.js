@@ -36,7 +36,7 @@ export default function Navbar() {
   ];
   return (
     <>
-      <div className="bg-[#4F5DF5] w-full py-2">
+      <div className="bg-[#4F5DF5] w-full py-2 px-3">
         <div className="container mx-auto flex justify-between items-center text-white">
           <div className="flex justify-start items-center gap-1 text-base">
             {" "}
@@ -116,6 +116,9 @@ export default function Navbar() {
                     <li
                       key={idx}
                       className="text-gray-700 text-md font-bold hover:text-indigo-600"
+                      onClick={() => {
+                        setState(!state);
+                      }}
                     >
                       <Link
                         href={item.path}
