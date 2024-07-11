@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaWhatsapp } from "react-icons/fa6";
 import { MdOutlineEmail } from "react-icons/md";
+import Head from "next/head";
 
 export default function Page() {
   const { handleSubmit, register } = useForm();
@@ -14,6 +15,9 @@ export default function Page() {
 
   return (
     <div className=" container  mx-auto md:py-10">
+      <Head>
+      <title>Contact Us</title>
+    </Head>
       <h2 className="text-4xl font-semibold text-center py-4    ">
         Contact Us
       </h2>

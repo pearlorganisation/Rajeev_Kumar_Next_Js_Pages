@@ -4,14 +4,15 @@ import matter from "gray-matter";
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
-import Image from "next/image";
 import Head from "next/head";
 
 export default function Page({ blogs }) {
-  console.log("blogs", blogs);
   return (
-    <div className="p-2 container mx-auto">
-      <div className="flex justify-center">
+    <div className="p-2 container mx-auto ">
+      <Head>
+        <title>Blog</title>
+      </Head>
+      <div className="flex justify-center ">
         <h1 className="text-4xl py-4  text-center font-semibold border-b-[0.2rem] border-gray-400">
           Blog
         </h1>

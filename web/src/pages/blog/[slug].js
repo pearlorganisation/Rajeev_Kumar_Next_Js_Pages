@@ -7,6 +7,7 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import Link from "next/link";
 import { remark } from "remark";
 import html from "remark-html";
+import Head from "next/head";
 
 export default function PostPage({
   frontmatter: { title, date, type, cover_image },
@@ -31,8 +32,11 @@ export default function PostPage({
   console.log(previousSlug, "prevSlug");
   console.log(nextSlug, "nextSlug");
   return (
-    <div className="grid lg:grid-cols-[auto_25rem] gap-y-4 p-10 container mx-auto">
-      <div className="card card-page ">
+    <div className="grid md:grid-cols-[auto_25rem] p-10 container mx-auto ">
+      <Head>
+        <title>{slug}</title>
+      </Head>
+      <div className="card card-page border-b-[0.1rem]  border-dashed border-slate-400 ">
         <div>
           <img src={cover_image} className="w-full min-h-[50vh]" alt={title} />
         </div>
@@ -110,7 +114,7 @@ export default function PostPage({
           </div>
         </div>
       </div>
-      <button onClick={()=>{}}>click me</button>
+      <button onClick={() => {}}>click me</button>
     </div>
   );
 }

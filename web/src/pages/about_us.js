@@ -1,8 +1,15 @@
+import Head from 'next/head'
 import React from 'react'
 
 const page = () => {
+  
+    
+
   return (
     <section className=' p-6'>
+      <Head>
+      <title>About Us</title>
+    </Head>
        <div className='flex gap-10 justify-center items-center flex-col'>
         <h1 className='text-4xl text-extrabold'>About Us</h1>
 
