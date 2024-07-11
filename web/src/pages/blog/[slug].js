@@ -88,7 +88,7 @@ export default function PostPage({
           </h1>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 py-3 ">
-            {allBlogPaths.map((el, index) => {
+            {allBlogPaths.filter((el)=>el.slug !== slug).map((el, index) => {
               return (
                 <Link href={el?.slug} key={index}>
                   <div className=" relative h-[15rem]">

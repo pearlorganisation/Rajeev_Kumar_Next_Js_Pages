@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/image"
 
 export default function Page({ blogs }) {
   console.log("blogs", blogs);
