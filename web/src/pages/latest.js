@@ -9,11 +9,11 @@ export default function Page({ blogs }) {
   return (
     <div className="p-2 container mx-auto ">
       <Head>
-        <title>Blog</title>
+        <title>Latest Articles</title>
       </Head>
       <div className="flex justify-center ">
         <h1 className="text-4xl py-4  text-center font-semibold border-b-[0.2rem] border-gray-400">
-          Blog
+          Latest Articles
         </h1>
       </div>
       <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 p-10 justify-center items-center ">
