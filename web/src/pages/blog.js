@@ -1,5 +1,3 @@
-import Blog from "@/components/Blog/Blog";
-import filterFiles from "@/util/filterFiles";
 import matter from "gray-matter";
 import fs from "fs";
 import path from "path";

@@ -2,14 +2,15 @@
 import { useRef, useState } from "react";
 
 const FaqsCard = (props) => {
+  const { setFlag, flag, index } = props;
   const answerElRef = useRef();
-  const [state, setState] = useState(false);
+  const [state, setState] = useState(true);
   const [answerH, setAnswerH] = useState("0px");
   const { faqsList, idx } = props;
 
   const handleOpenAnswer = () => {
     const answerElH = answerElRef.current.childNodes[0].offsetHeight;
-    setState(!state);
+    // setState(!state);
     setAnswerH(`${answerElH + 20}px`);
   };
 
@@ -21,11 +22,20 @@ const FaqsCard = (props) => {
           "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
       }}
       key={idx}
-      onClick={handleOpenAnswer}
+      onClick={() => {
+        setFlag((prev) => {
+          console.log(prev === index);
+          if (prev === index) return null;
+          return index;
+        });
+        handleOpenAnswer();
+
+        // setState((prevState) => !prevState);
+      }}
     >
       <h4 className="cursor-pointer mx-2  flex items-center justify-between text-sm md:text-lg font-semibold text-gray-700 ">
         Q {faqsList.q}
-        {state ? (
+        {flag === index ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5 text-gray-500 ml-2"
@@ -60,7 +70,7 @@ const FaqsCard = (props) => {
       <div
         ref={answerElRef}
         className="duration-300 "
-        style={state ? { height: answerH } : { height: "0px" }}
+        style={flag === index ? { height: answerH } : { height: "0px" }}
       >
         <div className="flex flex-col gap-4 py-4 px-6 border-t-2">
           <div className="w-full"></div>
@@ -72,6 +82,7 @@ const FaqsCard = (props) => {
 };
 
 export default function Faq() {
+  const [flag, setFlag] = useState(null);
   const faqsList = [
     {
       q: "What is the webinar and what is the course",
@@ -105,13 +116,19 @@ export default function Faq() {
         <h1 className="text-3xl text-gray-800 font-bold">FAQs</h1>
       </div>
 
-      <div className="conatiner mx-auto grid md:grid-cols-2 ">
-        <div className="  grid place-items-center">
+      <div className="conatiner mx-auto grid md:grid-cols-2 py-6 ">
+        <div className="grid place-items-center h-[30rem]">
           <img src="faq.svg" alt="img" className="" />
         </div>
         <div className="mt-14 max-w-4xl mx-auto ">
           {faqsList.map((item, idx) => (
-            <FaqsCard key={idx} faqsList={item} />
+            <FaqsCard
+              key={idx}
+              faqsList={item}
+              setFlag={setFlag}
+              flag={flag}
+              index={idx}
+            />
           ))}
         </div>
       </div>

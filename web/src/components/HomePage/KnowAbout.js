@@ -5,8 +5,8 @@ import { FaCircleCheck } from "react-icons/fa6";
 const KnowAbout = () => {
   return (
     <div className="bg-gray-100">
-      <div className="container mx-auto p-8">
-        <div className=" rounded-lg flex flex-col lg:flex-row items-center p-6 space-y-6 lg:space-y-0 lg:space-x-6">
+      <div className="container mx-auto p-">
+        <div className=" rounded-lg flex flex-col gap-4 md:gap-0 lg:flex-row items-center p-6 space-y-6 lg:space-y-0 lg:space-x-6">
           <div className="flex-1">
             <img
               src="/KnowAbout.webp"
@@ -15,9 +15,9 @@ const KnowAbout = () => {
             />
           </div>
           <div className="flex-1">
-            <h1 classNameName="font-medium text-xl text-indigo-500 flex ">
+            <h1 className="font-medium text-xl text-indigo-500 flex ">
               {" "}
-              <div classNameName="flex justify-start items-center">
+              <div className="flex   text-red-600 justify-start items-center">
                 <FaAngleRight />
                 <FaAngleRight />
                 <FaAngleRight />

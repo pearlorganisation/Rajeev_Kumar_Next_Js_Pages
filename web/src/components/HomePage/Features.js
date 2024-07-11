@@ -1,4 +1,5 @@
 "use client";
+import PostPage from "@/pages/blog/[slug]";
 import React from "react";
 import { useForm } from "react-hook-form";
 
@@ -38,7 +39,7 @@ export default function Features() {
 
   return (
     <>
-      <div className=" p-4 md:p-12 grid  md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
+      <div className=" p-4 md:p-12 grid  sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
         {featuresData.map((el, index) => (
           <div
             key={index}
