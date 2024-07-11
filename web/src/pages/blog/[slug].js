@@ -32,11 +32,11 @@ export default function PostPage({
   console.log(previousSlug, "prevSlug");
   console.log(nextSlug, "nextSlug");
   return (
-    <div className="grid md:grid-cols-[auto_25rem] p-10 container mx-auto">
+    <div className="grid md:grid-cols-[auto_25rem] p-10 container mx-auto ">
       <Head>
       <title>{slug}</title>
     </Head>
-      <div className="card card-page ">
+      <div className="card card-page border-b-[0.1rem]  border-dashed border-slate-400 ">
         <div>
           <img src={cover_image} className="w-full min-h-[50vh]" alt={title} />
         </div>
@@ -65,6 +65,11 @@ export default function PostPage({
           )}
         </div>
       </div>
+      
+ 
+
+
+
       <div className="px-6">
         <div className="border rounded-lg w-full px-4  ">
           <p className='font-bold py-1 text-xl border-b-[0.1rem] before:content-[""] relative before:absolute before:bottom-0 before:border-b-indigo-500 before:border-b-2  before:w-12  '>
