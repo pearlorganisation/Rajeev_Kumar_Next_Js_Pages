@@ -31,7 +31,7 @@ export default function PostPage({
   console.log(previousSlug, "prevSlug");
   console.log(nextSlug, "nextSlug");
   return (
-    <div className="grid md:grid-cols-[auto_20rem] p-10">
+    <div className="grid md:grid-cols-[auto_25rem] p-10 container mx-auto">
       <div className="card card-page ">
         <div>
           <img src={cover_image} className="w-full min-h-[50vh]" alt={title} />
@@ -70,9 +70,11 @@ export default function PostPage({
           <div>
             {allBlogPaths.map((el, index) => {
               return (
-                <p key={index} className="text-md  py-3">
-                  {el.frontmatter.title}
-                </p>
+                <Link key={index} href={el?.slug}>
+                  <p className="text-md hover:text-blue-600  py-3">
+                    {el.frontmatter.title}
+                  </p>
+                </Link>
               );
             })}
           </div>
@@ -88,17 +90,19 @@ export default function PostPage({
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 py-3 ">
             {allBlogPaths.map((el, index) => {
               return (
-                <div key={index} className=" relative h-[15rem]">
-                  <h1 className="absolute bottom-0 bg-indigo-500 m-2 text-sm rounded-md text-white font-bold px-4 py-2 text-center">
-                    {el.frontmatter.title}
-                  </h1>
+                <Link href={el?.slug} key={index}>
+                  <div className=" relative h-[15rem]">
+                    <h1 className="absolute bottom-0 bg-indigo-500 m-2 text-sm rounded-md text-white font-bold px-4 py-2 text-center">
+                      {el.frontmatter.title}
+                    </h1>
 
-                  <img
-                    className="w-full h-full "
-                    alt="img"
-                    src={el.frontmatter.cover_image}
-                  />
-                </div>
+                    <img
+                      className="w-full h-full "
+                      alt="img"
+                      src={el.frontmatter.cover_image}
+                    />
+                  </div>
+                </Link>
               );
             })}
           </div>
