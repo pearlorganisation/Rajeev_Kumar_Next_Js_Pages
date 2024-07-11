@@ -31,7 +31,7 @@ export default function PostPage({
   console.log(previousSlug, "prevSlug");
   console.log(nextSlug, "nextSlug");
   return (
-    <div className="grid md:grid-cols-[auto_25rem] p-10 container mx-auto">
+    <div className="grid lg:grid-cols-[auto_25rem] gap-y-4 p-10 container mx-auto">
       <div className="card card-page ">
         <div>
           <img src={cover_image} className="w-full min-h-[50vh]" alt={title} />
@@ -61,7 +61,7 @@ export default function PostPage({
           )}
         </div>
       </div>
-      <div className="px-6">
+      <div className="lg:px-6 ">
         <div className="border rounded-lg w-full px-4  ">
           <p className='font-bold py-1 text-xl border-b-[0.1rem] before:content-[""] relative before:absolute before:bottom-0 before:border-b-indigo-500 before:border-b-2  before:w-12  '>
             Latest Blog
@@ -87,27 +87,30 @@ export default function PostPage({
             Related Blog
           </h1>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 py-3 ">
-            {allBlogPaths.filter((el)=>el.slug !== slug).map((el, index) => {
-              return (
-                <Link href={el?.slug} key={index}>
-                  <div className=" relative h-[15rem]">
-                    <h1 className="absolute bottom-0 bg-indigo-500 m-2 text-sm rounded-md text-white font-bold px-4 py-2 text-center">
-                      {el.frontmatter.title}
-                    </h1>
+          <div className="flex flex-wrap gap-6 py-3 ">
+            {allBlogPaths
+              .filter((el) => el.slug !== slug)
+              .map((el, index) => {
+                return (
+                  <Link href={el?.slug} key={index}>
+                    <div className=" relative w-[20rem] h-[15rem]">
+                      <h1 className="absolute bottom-0 bg-indigo-500 m-2 text-sm rounded-md text-white font-bold px-4 py-2 text-center">
+                        {el.frontmatter.title}
+                      </h1>
 
-                    <img
-                      className="w-full h-full "
-                      alt="img"
-                      src={el.frontmatter.cover_image}
-                    />
-                  </div>
-                </Link>
-              );
-            })}
+                      <img
+                        className="w-full h-full "
+                        alt="img"
+                        src={el.frontmatter.cover_image}
+                      />
+                    </div>
+                  </Link>
+                );
+              })}
           </div>
         </div>
       </div>
+      <button onClick={()=>{}}>click me</button>
     </div>
   );
 }
