@@ -20,19 +20,19 @@ export default function Features() {
     {
       cardColor: "red",
       title: "Flexible Classes",
-      img: "imgTemp.svg",
+      img: "Flexible.svg",
       body: "We offer a class structure designed to fit seamlessly into your life. Whether you're juggling work commitments, family responsibilities, or other obligations, our class timing and pace options ensure that you can pursue your educational goals without compromise.",
     },
     {
       cardColor: "red",
       title: "Affordable Pricing",
-      img: "imgTemp.svg",
+      img: "affordable.svg",
       body: "At Thought Glow, we believe that quality education should be accessible to everyone. That's why we've made it our mission to offer affordable pricing options that fit every budget.",
     },
     {
       cardColor: "red",
       title: "Expert Trainers",
-      img: "imgTemp.svg",
+      img: "Expert.svg",
       body: "You'll be guided by an instructor with extensive experience at renowned companies such as Microsoft, Amazon, and numerous startups across India and the USA.",
     },
   ];
